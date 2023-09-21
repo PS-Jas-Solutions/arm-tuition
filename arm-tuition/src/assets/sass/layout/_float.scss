@@ -1,0 +1,24 @@
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-none {
+    float: none;
+}
+
+//Arabic styles
+
+.arabic {
+    .pull-left {
+        float: right;
+    }
+    
+    .pull-right {
+        float: left;
+    }
+    
+}

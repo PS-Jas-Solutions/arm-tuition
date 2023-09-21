@@ -1,1 +1,224 @@
 /* You can add global styles to this file, and also import other style files */
+// @import url('./assets/sass/print.scss');
+// @import url('./assets/sass/screen.scss');
+// @import url('./assets/sass/common/_all.scss');
+
+$nav-color-1: #81c2de;
+$nav-color-2: #4f92ac;
+$footer-color-1: #81c2de;
+$footer-color-2: #4f92ac;
+$color-white: #FFFBFA;
+$color-black: #191308;
+
+$primary-color: #253753;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+header {
+    height: 4rem;
+    background: #061922;
+    width: 100%;
+    border-bottom: 1px solid #8aa8f2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background: #179299;
+    background-image: linear-gradient(to bottom right, $nav-color-1, $nav-color-2);
+    animation-name: show-menu;
+    animation-duration: 2s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .hamburger-wrapper {
+        width: 25%;
+        padding-left: 1rem;
+
+        .menu-icon {
+            color: $color-white;
+            cursor: pointer;
+        }
+    }
+
+    .menu {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .action-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 25%;
+        padding: 0 1rem;
+    }
+
+    .header-action-btn {
+        color: $primary-color;
+        border: 1px solid $color-white;
+        background: $color-white;
+        font-weight: bold;
+        font-size: 1.1rem;
+        border-radius: 2rem;
+        padding: 0.5rem 1.5rem;
+        cursor: pointer;
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1;
+            color: $color-white;
+            border: 1px solid $primary-color;
+            background: $primary-color;
+            outline: 0;
+        }
+    }
+
+
+    a {
+        color: $color-black;
+        text-decoration: none;
+        margin: 0;
+        padding: 1rem 1rem;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            left: 0;
+            bottom: 0;
+            background: $color-white;
+            opacity: 0.3;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            color: $primary-color;
+            // background: $color-white;
+            font-weight: bold;
+
+            &::before {
+                height: 100%;
+            }
+        }
+    }
+}
+
+.page-section {
+    margin-top: 4rem;
+}
+
+
+
+
+
+.footer {
+    height: 4rem;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom right, rgba($footer-color-1, 1), rgba($footer-color-2, 1));
+        transition: all .4s ease-out;
+
+        &__links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 50%;
+        }
+    }
+
+    .social-link {
+        cursor: pointer;
+
+        &--linkedin {
+            color: #2d76b0;
+        }
+
+        &--instagram {
+            color: #9a2970;
+        }
+
+        & .social-svg {
+            width: 3rem;
+            height: 3rem;
+
+            & .social-group {
+                &__icon {
+                    fill: $color-black;
+                    transition: all .2s;
+                }
+
+                &__inner-circle {
+                    fill: transparent;
+                    transition: all .2s;
+                }
+
+                &__outline {
+                    stroke: $color-black;
+                    transform-origin: 50% 50%;
+                    transition: all .2s;
+                }
+
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                & .social-group {
+                    &__icon {
+                        fill: $color-white;
+                        transition: all .45s;
+                    }
+
+                    &__inner-circle {
+                        fill: currentColor;
+                        transition: all .45s;
+
+                        &--instagram {
+                            fill: url(#simpleInsta) !important;
+                        }
+                    }
+
+                    &__outline {
+                        stroke: currentColor;
+                        transform: scale(1.1);
+                        transition: all .45s;
+                    }
+                }
+            }
+        }
+    }
+}
