@@ -45,7 +45,11 @@ export class AppComponent {
     (x[this.slideIndex - 1] as HTMLElement).style.display = "block";
     dots[this.slideIndex - 1].className += " active";
   }
-  public goToLink(url: string){
+  public goToLink(url: string) {
     window.open(url, "_blank");
-}
+  }
+  public scrollToElement(elementId: string) {
+    const scrollElement = document.getElementById(elementId);
+    window.scrollTo((scrollElement as HTMLElement).offsetLeft, (scrollElement as HTMLElement).offsetTop - 64);
+  }
 }

@@ -19,12 +19,12 @@
         </span>
     </div>
     <div class="menu">
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Contact</a>
+        <span (click)="scrollToElement('cover_page')">Home</span>
+        <span (click)="scrollToElement('about_us')">About</span>
+        <span (click)="scrollToElement('contact_us')">Contact</span>
     </div>
     <div class="action-wrapper">
-        <button class="header-action-btn">Action Button</button>
+        <button class="header-action-btn">Request Callback</button>
     </div>
 </nav>
 
@@ -38,7 +38,7 @@
 </div>
 
 
-<section class="page-section">
+<section id="cover_page" class="page-section">
     <div class="cover-card">
         <div class="snow">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMax slice">
@@ -112,8 +112,20 @@
                 </g>
             </svg>
         </div>
-
+        <div class="cubic-animation">
+            <div class="cube">
+                <div class="box box1">+</div>
+                <div class="box box2">-</div>
+                <div class="box box3">x</div>
+                <div class="box box4">&#247;</div>
+                <div class="box box5">=</div>
+                <div class="box box6">%</div>
+            </div>
+        </div>
         <div class="company-intro">
+            <!-- <div>
+                <img src="assets/logo_circle.jpg" alt="">
+            </div> -->
             <h1 class="company-name">ARM Classes</h1>
             <h3 class="company-tag">Antony Raju Math Classes</h3>
         </div>
@@ -140,8 +152,8 @@
     </div>
 </section>
 
-<section class="ceo-wrapper">
-    <div class="ceo-card">
+<section id="about_us" class="about-us-section">
+    <div class="about-us-content">
         <div class="left">
             <img src="assets/ceo.png" alt="">
         </div>
@@ -152,20 +164,22 @@
                 <li>For Kerala State, CBSE & ICSE Boards</li>
             </ul>
             <p class="paragraph">
-                Our unconventional and interative teaching mechanism ensure that students are able to grasp all concepts and eliminates the fear of formulas and numbers.
+                Our unconventional and interative teaching mechanism ensure that students are able to grasp all concepts
+                and eliminates the fear of formulas and numbers.
             </p>
         </div>
     </div>
 </section>
 
-<section class="card-wrapper">  
+<section class="card-section">
     <div class="card">
         Individual Mentoring
         <p>Personalized sessions provided based on the learning pace of each students.</p>
-    </div>  
+    </div>
     <div class="card">
         Exam Preparations
-        <p>Crash courses and multiple revision tests conducted to ensure that each student is ready for their board exam.</p>
+        <p>Crash courses and multiple revision tests conducted to ensure that each student is ready for their board
+            exam.</p>
     </div>
     <div class="card">
         Parental Engagement
@@ -173,14 +187,15 @@
     </div>
     <div class="card">
         Recorded Lessons
-        <p>Recorded lessons are available via the youtube channel thereby helping the students to revise each topic when required.</p>
+        <p>Recorded lessons are available via the youtube channel thereby helping the students to revise each topic when
+            required.</p>
     </div>
 </section>
-<section class="youtube-section">
-    <div class="gallery-header">
+<section class="section">
+    <div class="section-header-wrap">
         <h2 class="section-header">Youtube Videos</h2>
     </div>
-    <div class="youtube-content">
+    <div class="section-content youtube-content">
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/6RX2ZCmAxvg"
                 title="YouTube video player" frameborder="0"
@@ -198,25 +213,20 @@
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-            <!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Yj2iELI6OeI?controls=0"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe> -->
         </div>
-        <div class="more-section">
+        <div class="youtube-details">
             <button class="youtube-btn" (click)="goToLink('https://www.youtube.com/@ANTONYRAJUMATHCLASSESARM')">
                 <i class="fa fa-youtube-play"></i>
                 Visit Channel
             </button>
-            <p class="paragraph-text">In this channel the concepts of maths explained in the simple manner. Understand Maths easily and Learn
+            <p class="normal-text">In this channel the concepts of maths explained in the simple manner. Understand
+                Maths easily and Learn
                 it like solving Puzzles.</p>
-            <p class="paragraph-text">You can use this channel to prepare for competitive exams and for preparing your academic sessions.</p>
+            <p class="normal-text">You can use this channel to prepare for competitive exams and for preparing your
+                academic sessions.</p>
         </div>
     </div>
 
-</section>
-<section>
-    Fun with Mathematics
 </section>
 <section class="carousel-wrapper">
     <div class="carousel-images">
@@ -243,21 +253,66 @@
     </div>
 </section>
 
-<section>
-    <!-- left -->
-    For classes 10,11,12
-    Kerala State, CBSE & ICSE Boards
+<section id="contact_us" class="section">
+    <div class="section-header-wrap">
+        <h2 class="section-header">Contact US</h2>
+    </div>
+    <div class="section-content">
+        <form class="form" action="#" novalidate>
+            <div class="row">
+                <div class="form-group has-icon half-width-field">
+                    <i class="fa fa-user-o"></i>
+                    <label class="movable" for="first_name">First Name</label>
+                    <input type="text" name="first_name" id="first_name" class="form-field required" />
+                </div>
+                <div class="form-group has-icon half-width-field">
+                    <i class="fa fa-user-o"></i>
+                    <label class="movable" for="last_name">Last Name</label>
+                    <input type="text" name="last_name" id="last_name" class="form-field required" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group has-icon half-width-field">
+                    <i class="fa fa-phone"></i>
+                    <label class="movable" for="phone_number">Phone Number</label>
+                    <input type="text" name="phone_number" id="phone_number" class="form-field required" />
+                </div>
+                <div class="form-group has-icon select dropdown-up fa-id-badge half-width-field">
+                    <label class="movable" for="class">Class</label>
+                    <select name="class" id="class" class="form-field required">
+                        <option value="10" selected>Tenth</option>
+                        <option value="11">Plus One</option>
+                        <option value="12">Plus Two</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group has-icon full-width-field">
+                    <i class="fa fa-envelope-o"></i>
+                    <label class="movable" for="email">Email address</label>
+                    <input type="email" name="email" id="email" class="form-field required email" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group has-icon full-width-field">
+                    <i class="fa fa-comment-o"></i>
+                    <label class="movable" for="comment">Comment</label>
+                    <textarea name="comment" id="comment" rows="6" class="form-field required"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <button class="submit-button">Submit</button>
+            </div>
 
-    <!-- right -->
-    <!-- image -->
+        </form>
+    </div>
 </section>
-<section>
-    <h3>Book a FREE class</h3>
-    <!-- form card with name  class dropdown sylabus email phone number
-    button -->
-</section>
-<section>
-    <h3>See what students and parents say about us</h3>
+
+<section class="section">
+    <div class="section-header-wrap">
+        <h2 class="section-header">Reviews</h2>
+    </div>
+    <div class="section-content"></div>
     <!-- cards -->
     <!-- profile pic -->
     <!-- name -->
