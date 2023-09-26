@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,6 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'arm-tuition';
+
+  firebaseConfig = {
+    apiKey: "AIzaSyDFxTjSKbDt1Mpw8NRpHbcycpYDixSacHs",
+    authDomain: "arm-classes-1ee0f.firebaseapp.com",
+    projectId: "arm-classes-1ee0f",
+    storageBucket: "arm-classes-1ee0f.appspot.com",
+    messagingSenderId: "259608793257",
+    appId: "1:259608793257:web:c21f3a5e775a52460499b8",
+    measurementId: "G-EM5WGJJM4C"
+  };
 
   public mobileMenuOpened = false;
   public toggleSidebar() {
@@ -16,6 +27,8 @@ export class AppComponent {
 
   public slideIndex = 1;
   ngOnInit() {
+    const app = initializeApp(this.firebaseConfig);
+    const analytics = getAnalytics(app);
     this.showDivs(this.slideIndex);
     // setInterval(() => {
     //   this.showDivs(++this.slideIndex);
@@ -52,4 +65,5 @@ export class AppComponent {
     const scrollElement = document.getElementById(elementId);
     window.scrollTo((scrollElement as HTMLElement).offsetLeft, (scrollElement as HTMLElement).offsetTop - 64);
   }
+  // npm ci && npm run build
 }
