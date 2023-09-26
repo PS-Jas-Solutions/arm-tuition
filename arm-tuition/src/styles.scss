@@ -1295,3 +1295,189 @@ header {
         transform: rotateY(360deg) rotateZ(-90deg);
     }
 }
+
+@media (max-width: 720px) {
+    .nav {
+        width: 100vw;
+        justify-content: space-between;
+
+        .hamburger-wrapper {
+            width: 3rem;
+        }
+
+        .menu {
+            display: none;
+            width: 0;
+        }
+
+        .action-wrapper {
+            flex-grow: 1;
+        }
+    }
+
+    .cover-card {
+        min-height: 17rem !important;
+    }
+
+    .company-name {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .company-tag {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .stat-section {
+        // width: 70%;
+        // margin: 0 auto 14rem auto;
+        margin-bottom: 12rem;
+
+        .stat-container {
+            width: 70vw;
+            height: auto;
+
+            .stat-wrapper {
+                flex-direction: column;
+
+
+                .stat-block {
+                    flex-direction: row;
+                    width: 100%;
+                    justify-content: space-evenly;
+                    // border-bottom: 1px solid $color-black;
+
+                    .stat-count {
+                        font-size: 1.2rem;
+                        text-align: right;
+                        width: 50%;
+                        padding-right: 0.5rem;
+                        font-family: inherit;
+                        font-weight: 600;
+                        margin-bottom: 0;
+
+                        span {
+                            font-size: 1rem;
+                            font-family: Dancing sans-serif;
+                        }
+                    }
+
+                    .stat-title {
+                        font-size: 1.2rem;
+                        width: 50%;
+                        text-align: left;
+                        padding-left: 0.5rem;
+                        display: flex;
+                        align-items: center;
+                        font-family: inherit;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+    .about-us-section {
+        .about-us-content {
+            flex-direction: column;
+
+            .left {
+                width: 100%;
+            }
+
+            .right {
+                width: 100%;
+
+                .title {
+                    font-size: 2rem;
+                    text-align: left;
+                    padding: 2rem;
+                }
+
+                .feature-ul {
+                    padding-left: 3rem;
+                }
+
+                .paragraph {
+                    padding: 2rem;
+                }
+            }
+        }
+    }
+
+    .card-section {
+        flex-direction: column;
+
+        .card {
+            margin-top: 2rem;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .section {}
+
+    .youtube-content {
+        flex-direction: column;
+        padding-bottom: 0;
+        width: 70vw;
+        margin: 0 auto;
+
+        .video-container {
+            width: 100%;
+            grid-template-rows: repeat(2, 10rem);
+        }
+
+        .youtube-details {
+            width: 100%;
+            display: block;
+            padding-left: 0;
+            padding-bottom: 0;
+            
+            height: auto;
+            min-height: unset;
+    
+            .youtube-btn {
+                margin: 2rem auto;
+            }
+    
+            .normal-text {
+                margin-top: 0;
+                margin-bottom: 2rem;               
+            }
+        }
+    }
+
+    
+
+    .carousel-wrapper {
+        margin-bottom: 2rem;
+
+        .carousel-images {
+            height: 65vw;
+            margin-top: 1.5rem;
+
+            .carousel-image {}
+        }
+
+        .carousel-nav {
+            bottom: -3.5rem;
+        }
+    }
+
+    .form {
+        margin: 0;
+        width: 100%;
+
+        .row {
+            flex-direction: column;
+        }
+
+        .form-group.half-width-field {
+            width: 100%;
+        }
+    }
+}
