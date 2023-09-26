@@ -11,8 +11,11 @@
 </header> -->
 <nav class="nav" id="nav_id" [ngClass]="{ 'mobile-nav open': mobileMenuOpened }">
     <div class="hamburger-wrapper">
-        <span class="menu-icon material-symbols-outlined">
+        <span *ngIf="!mobileMenuOpened" class="menu-icon material-symbols-outlined" (click)="toggleSidebar()">
             menu
+        </span>
+        <span *ngIf="mobileMenuOpened" class="close-icon material-symbols-outlined" (click)="toggleSidebar()">
+            close
         </span>
     </div>
     <div class="menu">
@@ -24,8 +27,19 @@
         <button class="header-action-btn">Action Button</button>
     </div>
 </nav>
+
+<div class="overlay" [ngClass]="{'opened' : mobileMenuOpened, 'closed': !mobileMenuOpened}" id="sidebar_overlay_id">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Works</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</div>
+
+
 <section class="page-section">
-    <div class="hero">
+    <div class="cover-card">
         <div class="snow">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMax slice">
                 <g fill="#FFF" fill-opacity=".15" transform="translate(55 42)">
@@ -99,19 +113,163 @@
             </svg>
         </div>
 
-        <div class="hero__content">
-            <h1>Company Name</h1>
+        <div class="company-intro">
+            <h1 class="company-name">ARM Classes</h1>
+            <h3 class="company-tag">Antony Raju Math Classes</h3>
         </div>
 
     </div>
 </section>
-<section class="card-wrapper">
-    <div class="card"></div>
+
+<section class="stat-section">
+    <div class="stat-container">
+        <div class="stat-wrapper">
+            <div class="stat-block">
+                <div class="stat-count">100+</div>
+                <div class="stat-title">Students</div>
+            </div>
+            <div class="stat-block">
+                <div class="stat-count">100 <span style="font-size: 1.5rem;">%</span></div>
+                <div class="stat-title">Success Rate</div>
+            </div>
+            <div class="stat-block">
+                <div class="stat-count">100 <span style="font-size: 1.5rem;">%</span></div>
+                <div class="stat-title">Satisfaction</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ceo-wrapper">
+    <div class="ceo-card">
+        <div class="left">
+            <img src="assets/ceo.png" alt="">
+        </div>
+        <div class="right">
+            <h1 class="title">Let's make Math interesting</h1>
+            <ul>
+                <li>For classes 10, +1 & +2</li>
+                <li>For Kerala State, CBSE & ICSE Boards</li>
+            </ul>
+            <p class="paragraph">
+                Our unconventional and interative teaching mechanism ensure that students are able to grasp all concepts and eliminates the fear of formulas and numbers.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="card-wrapper">  
+    <div class="card">
+        Individual Mentoring
+        <p>Personalized sessions provided based on the learning pace of each students.</p>
+    </div>  
+    <div class="card">
+        Exam Preparations
+        <p>Crash courses and multiple revision tests conducted to ensure that each student is ready for their board exam.</p>
+    </div>
+    <div class="card">
+        Parental Engagement
+        <p>Parents are given constructive feedback from tutors.</p>
+    </div>
+    <div class="card">
+        Recorded Lessons
+        <p>Recorded lessons are available via the youtube channel thereby helping the students to revise each topic when required.</p>
+    </div>
+</section>
+<section class="youtube-section">
+    <div class="gallery-header">
+        <h2 class="section-header">Youtube Videos</h2>
+    </div>
+    <div class="youtube-content">
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6RX2ZCmAxvg"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UUpGHxV0CGU"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rEWIAL7aC6I"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2NLfr3q5d0E?controls=0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Yj2iELI6OeI?controls=0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe> -->
+        </div>
+        <div class="more-section">
+            <button class="youtube-btn" (click)="goToLink('https://www.youtube.com/@ANTONYRAJUMATHCLASSESARM')">
+                <i class="fa fa-youtube-play"></i>
+                Visit Channel
+            </button>
+            <p class="paragraph-text">In this channel the concepts of maths explained in the simple manner. Understand Maths easily and Learn
+                it like solving Puzzles.</p>
+            <p class="paragraph-text">You can use this channel to prepare for competitive exams and for preparing your academic sessions.</p>
+        </div>
+    </div>
+
+</section>
+<section>
+    Fun with Mathematics
+</section>
+<section class="carousel-wrapper">
+    <div class="carousel-images">
+        <img class="carousel-image" src="assets/pass_1.jpg">
+        <img class="carousel-image" src="assets/pass_2.jpg">
+        <img class="carousel-image" src="assets/pass_1.jpg">
+    </div>
+    <div class="carousel-nav">
+        <div class="nav-btn" (click)="plusDivs(-1)">
+            <span class="material-symbols-outlined">
+                navigate_before
+            </span>
+        </div>
+        <div class="image-thumbnail">
+            <span class="slider-thumb active" (click)="currentDiv(1)"></span>
+            <span class="slider-thumb" (click)="currentDiv(2)"></span>
+            <span class="slider-thumb" (click)="currentDiv(3)"></span>
+        </div>
+        <div class="nav-btn" (click)="plusDivs(1)">
+            <span class="material-symbols-outlined">
+                navigate_next
+            </span>
+        </div>
+    </div>
+</section>
+
+<section>
+    <!-- left -->
+    For classes 10,11,12
+    Kerala State, CBSE & ICSE Boards
+
+    <!-- right -->
+    <!-- image -->
+</section>
+<section>
+    <h3>Book a FREE class</h3>
+    <!-- form card with name  class dropdown sylabus email phone number
+    button -->
+</section>
+<section>
+    <h3>See what students and parents say about us</h3>
+    <!-- cards -->
+    <!-- profile pic -->
+    <!-- name -->
+    <!-- review -->
 </section>
 <footer class="footer">
     <div class="wrapper">
         <div class="wrapper__links">
-
+            <!-- https://www.facebook.com/armclasses -->
+            <!-- armclasses@gmail.com -->
+            <!-- 070126 75430 -->
+            <!-- https://www.youtube.com/antonyrajumathclassesarm -->
             <a class="social-link social-link--linkedin" id="linkedin">
                 <svg class="social-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
                     <title>
