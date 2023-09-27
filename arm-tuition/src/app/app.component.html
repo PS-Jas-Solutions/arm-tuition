@@ -307,7 +307,102 @@
         </form>
     </div>
 </section>
+<section id="add_new_student" class="section">
+    <div class="section-header-wrap">
+        <h2 class="section-header">Add New Student</h2>
+    </div>
+    <div class="section-content">
+        <form action="#" novalidate="" class="form">
+            <h3>Student Details</h3>
+            <div class="row">
+                <div class="form-group has-icon half-width-field">
+                    <i class="fa fa-user-o"></i>
+                    <label for="first_name" class="movable">First Name</label>
+                    <input type="text" name="first_name" id="first_name" class="form-field required" />
+                </div>
+                <div class="form-group has-icon half-width-field">
+                    <i class="fa fa-user-o"></i>
+                    <label for="last_name" class="movable">Last Name</label>
+                    <input type="text" name="last_name" id="last_name" class="form-field required" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group has-icon select dropdown-up fa-id-badge half-width-field">
+                    <label for="class" class="movable">Class</label>
+                    <select name="class" id="class" class="form-field required">
+                        <option value="10" selected="">Tenth</option>
+                        <option value="11">Plus One</option>
+                        <option value="12">Plus Two</option>
+                    </select>
+                </div>
+                <div class="form-group has-icon half-width-field">
+                    <i class="fa fa-phone"></i>
+                    <label for="phone_number" class="movable">Phone Number</label>
+                    <input type="text" name="phone_number" id="phone_number" class="form-field required" />
+                </div>
 
+            </div>
+            <div class="row">
+                <div class="form-group has-icon full-width-field">
+                    <i class="fa fa-envelope-o"></i>
+                    <label for="email" class="movable">Email address</label>
+                    <input type="email" name="email" id="email" class="form-field required email" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group has-icon full-width-field">
+                    <i class="fa fa-comment-o"></i>
+                    <label for="comment" class="movable">Comments, if any</label>
+                    <textarea name="comment" id="comment" rows="6" class="form-field required"></textarea>
+                </div>
+            </div>
+            <h3>Parent Details</h3>
+            <div class="row">
+                <div class="form-group has-icon half-width-field">
+                    <i class="fa fa-user-o"></i>
+                    <label for="father_name" class="movable">Father's Name</label>
+                    <input type="text" name="father_name" id="father_name" class="form-field required" />
+                </div>
+                <div class="form-group has-icon half-width-field">
+                    <i class="fa fa-user-o"></i>
+                    <label for="mother_name" class="movable">Mother's Name</label>
+                    <input type="text" name="mother_name" id="mother_name" class="form-field required" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group has-icon half-width-field">
+                    <i class="fa fa-phone"></i>
+                    <label for="gaurdian_phone_1" class="movable">Gaurdian Phone Number</label>
+                    <input type="text" name="gaurdian_phone_1" id="gaurdian_phone_1" class="form-field required" />
+                </div>
+                <div class="form-group has-icon half-width-field">
+                    <i class="fa fa-phone"></i>
+                    <label for="gaurdian_phone_2" class="movable">Alternate Number</label>
+                    <input type="text" name="gaurdian_phone_2" id="gaurdian_phone_2" class="form-field required" />
+                </div>
+            </div>
+            <h3>School Details</h3>
+            <div class="row">
+                <div class="form-group has-icon half-width-field">
+                    <i class="fa fa-graduation-cap"></i>
+                    <label for="father_name" class="movable">School Name</label>
+                    <input type="text" name="father_name" id="father_name" class="form-field required" />
+                </div>
+                <div class="form-group has-icon half-width-field">
+                    <i class="fa fa-map-marker"></i>
+                    <label for="mother_name" class="movable">Location</label>
+                    <input type="text" name="mother_name" id="mother_name" class="form-field required" />
+                </div>
+            </div>
+
+            <div class="row">
+                <button class="submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+</section>
 <section class="section">
     <div class="section-header-wrap">
         <h2 class="section-header">Reviews</h2>
@@ -321,11 +416,26 @@
 <footer class="footer">
     <div class="wrapper">
         <div class="wrapper__links">
+            <span>
+                <img src="assets/facebook.png" alt="">
+            </span>
+            <span>
+                <img src="assets/instagram.png" alt="">
+            </span>
+            <span>
+                <img src="assets/gmail.png" alt="">
+            </span>
+            <span>
+                <img src="assets/whatsapp.png" alt="">
+            </span>
+            <span>
+                <img src="assets/youtube.png" alt="">
+            </span>            
             <!-- https://www.facebook.com/armclasses -->
             <!-- armclasses@gmail.com -->
             <!-- 070126 75430 -->
             <!-- https://www.youtube.com/antonyrajumathclassesarm -->
-            <a class="social-link social-link--linkedin" id="linkedin">
+            <!-- <a class="social-link social-link--linkedin" id="linkedin">
                 <svg class="social-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
                     <title>
                         linkedin
@@ -361,7 +471,7 @@
                             fill="#FFF" fill-rule="nonzero" />
                     </g>
                 </svg>
-            </a>
+            </a> -->
         </div>
     </div>
 </footer>
