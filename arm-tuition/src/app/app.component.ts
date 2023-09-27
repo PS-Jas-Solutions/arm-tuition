@@ -9,11 +9,8 @@ import { getAnalytics } from "firebase/analytics";
 export class AppComponent {
   title = 'arm-tuition';
 
-  public mobileMenuOpened = false;
-  public toggleSidebar() {
-    this.mobileMenuOpened = !this.mobileMenuOpened;
-    document.getElementById('sidebar_overlay_id')?.classList.toggle('anim')
-  }
+  
+  
 
   public slideIndex = 1;
   ngOnInit() {
@@ -49,9 +46,6 @@ export class AppComponent {
   public goToLink(url: string) {
     window.open(url, "_blank");
   }
-  public scrollToElement(elementId: string) {
-    const scrollElement = document.getElementById(elementId);
-    window.scrollTo((scrollElement as HTMLElement).offsetLeft, (scrollElement as HTMLElement).offsetTop - 64);
-  }
+  
   // npm ci && npm run build
 }
