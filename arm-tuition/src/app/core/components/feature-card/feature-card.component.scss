@@ -1,0 +1,59 @@
+$primary-font: 'Corben';
+$secondary-font: 'Dancing Script';
+
+$nav-color-1: #81c2de;
+$nav-color-2: #4f92ac;
+$footer-color-1: #81c2de;
+$footer-color-2: #4f92ac;
+$color-white: #FFFBFA;
+$color-black: #191308;
+
+$primary-color: #253753;
+
+.card-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1rem;
+
+    .card {
+        width: 14rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background: #FFFBFA;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 2rem 2rem;
+        height: 13rem;
+        color: #191308;
+        font-size: 1.5rem;
+        text-align: center;
+
+        &:hover {
+            transform: scale(1.02);
+            cursor: pointer;
+            box-shadow: rgba(100, 100, 111, 0.8) 0px 7px 29px 0px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #959595;
+        }
+    }
+}
+@media (max-width: 801px) {  
+    .card-section {
+        flex-direction: column;
+
+        .card {
+            margin-top: 2rem;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+}

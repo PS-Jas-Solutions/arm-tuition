@@ -1,0 +1,24 @@
+<section class="carousel-wrapper">
+    <div class="carousel-images">
+        <img class="carousel-image" src="assets/pass_1.jpg">
+        <img class="carousel-image" src="assets/pass_2.jpg">
+        <img class="carousel-image" src="assets/pass_1.jpg">
+    </div>
+    <div class="carousel-nav">
+        <div class="nav-btn" (click)="plusDivs(-1)">
+            <span class="material-symbols-outlined">
+                navigate_before
+            </span>
+        </div>
+        <div class="image-thumbnail">
+            <span class="slider-thumb active" (click)="currentDiv(1)"></span>
+            <span class="slider-thumb" (click)="currentDiv(2)"></span>
+            <span class="slider-thumb" (click)="currentDiv(3)"></span>
+        </div>
+        <div class="nav-btn" (click)="plusDivs(1)">
+            <span class="material-symbols-outlined">
+                navigate_next
+            </span>
+        </div>
+    </div>
+</section>
