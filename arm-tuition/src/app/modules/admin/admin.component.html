@@ -1,3 +1,7 @@
-<app-admin-header></app-admin-header>
-<app-admin-sidebar></app-admin-sidebar>
-<router-outlet></router-outlet>
+<app-admin-header class="page-header"></app-admin-header>
+<div class="page-layout">
+    <app-admin-sidebar class="page-sidebar"></app-admin-sidebar>
+    <div class="page-content">
+        <router-outlet></router-outlet>
+    </div>    
+</div>

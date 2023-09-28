@@ -1,0 +1,19 @@
+@import '../../../sass/variable';
+
+.page-layout {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: calc(100vh - 4rem);
+}
+.page-sidebar {
+    width: 15rem;
+    height: 100%;
+    background: #63a5c0;
+}
+.page-content {
+    height: 100%;
+    width: calc(100% - 15rem);
+}
