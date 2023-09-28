@@ -40,7 +40,11 @@
     <div class="menu">
         <span (click)="scrollToElement('cover_page')">Home</span>
         <span (click)="scrollToElement('about_us')">About</span>
-        <span (click)="scrollToElement('contact_us')">Contact</span>
+        <!-- <span (click)="scrollToElement('feature_section')">Features</span> -->
+        <!-- <span (click)="scrollToElement('youtube_section')">Videos</span> -->
+        <!-- <span (click)="scrollToElement('gallery_section')">Images</span> -->
+        <span (click)="scrollToElement('contact_us')">Contact Us</span>
+        <!-- <span (click)="scrollToElement('review_section')">Reviews</span> -->
     </div>
     <div class="action-wrapper">
         <button class="header-action-btn">Request Callback</button>
@@ -49,8 +53,7 @@
 <div class="overlay" [ngClass]="{'opened' : mobileMenuOpened, 'closed': !mobileMenuOpened}" id="sidebar_overlay_id">
     <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Works</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">Contact Us</a></li>
     </ul>
 </div>

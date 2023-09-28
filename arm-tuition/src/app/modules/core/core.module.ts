@@ -12,6 +12,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { CoreComponent } from './components/core/core.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ReviewComponent } from './components/review/review.component';
 
 const routes:Routes = [
   { path:'', component: CoreComponent}
@@ -27,7 +28,8 @@ const routes:Routes = [
     YoutubeVideoComponent,
     GalleryComponent,
     ContactUsComponent,
-    CoreComponent
+    CoreComponent,
+    ReviewComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +44,8 @@ const routes:Routes = [
     FeatureCardComponent,
     YoutubeVideoComponent,
     GalleryComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ReviewComponent
   ]
 })
 export class CoreModule { }
