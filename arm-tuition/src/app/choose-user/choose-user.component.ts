@@ -10,13 +10,15 @@ export class ChooseUserComponent {
   public selected_user_type = 'user_guest';
   public showUserChoice = true;
   constructor(private readonly router: Router) {}
-  ngOnInit() {}
+  ngOnInit() {
+    localStorage.removeItem('logged_in_arm_user_type')
+  }
   public onUserChange(event: Event) {
     this.selected_user_type = (event.target as any).id;
   }
   public gotoHomePage() {
-    console.log(this.selected_user_type);
     this.showUserChoice = false;
+    localStorage.setItem('logged_in_arm_user_type', this.selected_user_type)
     if(this.selected_user_type === 'user_guest') {
       this.router.navigate(['core'])
     } else if(this.selected_user_type === 'user_student') {

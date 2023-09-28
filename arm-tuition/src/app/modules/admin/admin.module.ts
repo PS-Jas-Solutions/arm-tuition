@@ -2,14 +2,29 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminHeaderComponent } from './admin-header/admin-header.component';
+import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
 
-const routes:Routes = [
-  { path:'', component: AdminComponent}
+const routes: Routes = [
+  {
+    path: '', component: AdminComponent, 
+    children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', component: AdminDashboardComponent }      
+    ]
+  },
+  
 ];
 
 @NgModule({
   declarations: [
-    AdminComponent
+    AdminComponent,
+    AdminHeaderComponent,
+    AdminSidebarComponent,
+    AdminDashboardComponent,
+    AdminPageComponent
   ],
   imports: [
     CommonModule,
