@@ -1,3 +1,33 @@
+<!-- <header>
+    <div class="header">
+        <button class="menu-btn" aria-label="Open Menu">
+            <span class="menu-icon material-symbols-outlined" (click)="openSidebar()">
+                menu
+            </span>
+        </button>
+
+        <nav class="menu" id="menu">
+            <div class="drawer" id="drawer">
+                <button class="close-btn" aria-label="Close Menu">
+                    <span class="close-icon material-symbols-outlined"
+                        (click)="closeSidebar()">
+                        close
+                    </span>
+                </button>
+                <span class="tab">Home</span>
+                <span class="tab">Gallery</span>
+                <span class="tab">About</span>
+                <span class="tab">Contact</span>
+            </div>
+            <div class="blank" id="blank" (click)="blankClicked()"></div>
+        </nav>
+
+        <div class="action-wrapper">
+            <button class="header-action-btn">Request Callback</button>
+        </div>
+    </div>
+</header> -->
+
 <nav class="nav" id="nav_id" [ngClass]="{ 'mobile-nav open': mobileMenuOpened }">
     <div class="hamburger-wrapper">
         <span *ngIf="!mobileMenuOpened" class="menu-icon material-symbols-outlined" (click)="toggleSidebar()">
