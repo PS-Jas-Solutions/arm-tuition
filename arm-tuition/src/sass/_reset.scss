@@ -1,0 +1,14 @@
+@import 'variable';
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: $primary-font;
+    vertical-align: baseline;
+}
+
+body {
+    background: rgba(96, 163, 189, 0.2588235294);
+}

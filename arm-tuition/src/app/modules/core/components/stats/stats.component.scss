@@ -1,14 +1,4 @@
-$primary-font: 'Corben';
-$secondary-font: 'Dancing Script';
-
-$nav-color-1: #81c2de;
-$nav-color-2: #4f92ac;
-$footer-color-1: #81c2de;
-$footer-color-2: #4f92ac;
-$color-white: #FFFBFA;
-$color-black: #191308;
-
-$primary-color: #253753;
+@import '../../../../../sass/variable';
 .stat-section {
     position: relative;
     // margin-bottom: 9.5rem;

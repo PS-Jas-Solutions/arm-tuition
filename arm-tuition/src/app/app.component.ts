@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { YoutubeService } from './youtube.service';
 import { Subject, Subscription, Observable, of } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
@@ -11,7 +10,7 @@ import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Rout
 })
 export class AppComponent {
   title = 'arm-tuition';
-  subscriptions$ = new Subscription();
+  public subscriptions$ = new Subscription();
   constructor(
     private readonly router: Router
   ) { }

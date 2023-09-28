@@ -1,0 +1,28 @@
+@import 'variable';
+.section {
+    padding: 1rem;
+
+    .section-header {
+        font-size: 2rem;
+        color: $primary-color;
+    }
+
+    .section-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background: $color-white;
+        border-radius: 20px;
+        padding: 2rem;
+    }
+}
+
+
+
+
+.normal-text {
+    font-size: 1rem;
+    color: $primary-color;
+    text-align: justify;
+}
