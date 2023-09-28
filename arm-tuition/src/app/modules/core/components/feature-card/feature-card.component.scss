@@ -15,6 +15,7 @@ $primary-color: #253753;
     align-items: center;
     justify-content: space-around;
     padding: 0 1rem;
+    flex-wrap: wrap;
 
     .card {
         width: 14rem;
@@ -31,6 +32,7 @@ $primary-color: #253753;
         font-size: 1.5rem;
         text-align: center;
 
+        margin-top: 2rem;
         &:hover {
             transform: scale(1.02);
             cursor: pointer;
@@ -48,11 +50,11 @@ $primary-color: #253753;
         flex-direction: column;
 
         .card {
-            margin-top: 2rem;
+            // margin-top: 2rem;
 
-            &:first-child {
-                margin-top: 0;
-            }
+            // &:first-child {
+            //     margin-top: 0;
+            // }
         }
     }
 
