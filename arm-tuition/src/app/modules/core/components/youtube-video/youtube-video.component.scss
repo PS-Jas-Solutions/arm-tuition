@@ -21,9 +21,9 @@ $primary-color: #253753;
         width: 60%;
     }
 
-    iframe {
+    .youtube-thumbnail {
         position: relative;
-        width: 100%;
+        width: fit-content;
         height: 100%;
         object-fit: cover;
         box-shadow: 0 0 0 #0000;
@@ -54,6 +54,12 @@ $primary-color: #253753;
             filter: sepia(0%) hue-rotate(0deg);
             opacity: 1;
             transition: all 0.3s cubic-bezier(0.3, 0.1, 0.3, 0.85);
+        }
+
+        img {
+            border: 2px solid black;
+            border-radius: 10px;
+            height: 100%;
         }
     }
 
