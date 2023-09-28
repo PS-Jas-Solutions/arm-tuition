@@ -7,6 +7,7 @@ import { CoreModule } from './modules/core/core.module';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ChooseUserComponent } from './choose-user/choose-user.component';
+import { NgbCollapseModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { ChooseUserComponent } from './choose-user/choose-user.component';
     CommonModule,
     AppRoutingModule,
     CoreModule,
-    HttpClientModule 
+    HttpClientModule,
+    NgbModule,
+    NgbCollapseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

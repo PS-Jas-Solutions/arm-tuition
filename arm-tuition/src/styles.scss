@@ -4,6 +4,21 @@
 @import './sass/all';
 
 
+$primary-font: 'Corben';
+$secondary-font: 'Dancing Script';
+
+$nav-color-1: #81c2de;
+$nav-color-2: #4f92ac;
+
+$footer-color-1: #81c2de;
+$footer-color-2: #4f92ac;
+
+$color-white: #FFFBFA;
+$color-black: #191308;
+
+$primary-color: #253753;
+$primary-active: #007ECC;
+
 // $primary-font: 'Corben';
 // $secondary-font: 'Dancing Script';
 
@@ -686,4 +701,160 @@
     }
 }
 
-  
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+.btn {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all .5s ease-Out;
+
+    &.secondary {
+        color: $primary-color;
+        border: 1px solid $color-white;
+        background: $color-white;
+        border-radius: 2rem;
+        padding: 0.5rem 1.5rem;
+
+        &:hover {
+            opacity: 1;
+            color: $color-white;
+            border: 1px solid $primary-color;
+            background: $primary-color;
+            outline: 0;
+        }
+    }
+
+    &.header-btn {
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+
+}
+
+.nav {
+    z-index: 10;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom right, $nav-color-1, $nav-color-2);
+    animation-name: show-menu;
+    animation-duration: 2s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.page-header {
+    .action-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 25%;
+        padding: 0 1rem;
+    }
+
+    .nav {
+        .hamburger-wrapper {
+            width: 25%;
+            padding-left: 1rem;
+        }
+
+        .menu {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            span {
+                color: $primary-color;
+                text-decoration: none;
+                margin: 0;
+                padding: 1rem 1rem;
+                font-size: 1rem;
+                font-weight: 700;
+                cursor: pointer;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    left: 0;
+                    bottom: 0;
+                    background: $color-white;
+                    opacity: 0.3;
+                    transition: all 0.3s;
+                }
+
+                &:hover {
+                    color: $primary-color;
+                    font-weight: bold;
+
+                    &::before {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-icon {
+        color: $color-white;
+        cursor: pointer;
+    }
+}
+
+.sidebar-offcanvas {
+    background: $footer-color-1;
+
+    .offcanvas-header {
+        background: $primary-color;
+        color: $color-white;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+
+        .close-icon {
+            color: $color-white;
+            cursor: pointer;
+        }
+    }
+
+    .offcanvas-body {
+        color: $color-white;
+    }
+    .sidebar-ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        .sidebar-li {
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer;
+            padding: 0 1rem;
+            border-radius: 1rem;
+
+            span {
+                margin-right: 1rem;
+            }
+            &:hover {
+                background: $primary-color;
+                color: $color-white;
+            }
+        }
+    }
+    .sidebar-collapsible-menu-item {
+        padding-left: 2rem;
+    }
+}

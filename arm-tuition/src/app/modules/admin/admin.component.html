@@ -1,7 +1,138 @@
-<app-admin-header class="page-header"></app-admin-header>
+<div class="page-header">
+    <nav class="nav admin-header" id="nav_id">
+        <div class="hamburger-wrapper">
+            <span class="menu-icon material-symbols-outlined" (click)="showSidebar(sidebarContent)">
+                menu
+            </span>
+        </div>
+        <div class="action-wrapper">
+            <button class="btn secondary header-btn">Button</button>
+        </div>
+    </nav>
+</div>
 <div class="page-layout">
-    <app-admin-sidebar class="page-sidebar"></app-admin-sidebar>
     <div class="page-content">
         <router-outlet></router-outlet>
-    </div>    
+    </div>
 </div>
+<ng-template #sidebarContent let-offcanvas>
+    <div class="offcanvas-header">
+        <h4 class="offcanvas-title" id="offcanvas-basic-title">Admin Profile</h4>
+        <span class="close-icon material-symbols-outlined" aria-label="Close"
+            (click)="offcanvas.dismiss('Cross click')">
+            close
+        </span>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="sidebar-ul">
+            <li class="sidebar-li">
+                <span class="material-symbols-outlined">
+                    home
+                </span>
+                Dashboard
+            </li>
+            <li class="sidebar-li" (click)="listMenuCollapse.toggle()">
+                <span class="material-symbols-outlined">
+                    list
+                </span>
+                List
+            </li>
+            <div class="sidebar-collapsible-menu-item" #listMenuCollapse="ngbCollapse" [(ngbCollapse)]="isListMenuCollapsed">
+                <li class="sidebar-li" (click)="listMenuCollapse.toggle()">
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+                    Students
+                </li>
+                <li class="sidebar-li" (click)="listMenuCollapse.toggle()">
+                    <span class="material-symbols-outlined">
+                        supervisor_account
+                    </span>
+                    Parents
+                </li>
+                <li class="sidebar-li" (click)="listMenuCollapse.toggle()">
+                    <span class="material-symbols-outlined">
+                        supervisor_account
+                    </span>
+                    Enquiries
+                </li>
+            </div>
+            <li class="sidebar-li" (click)="socialMediaMenuCollapse.toggle()">
+                <span class="material-symbols-outlined">
+                    public
+                </span>
+                Social Media
+            </li>
+            <div class="sidebar-collapsible-menu-item" #socialMediaMenuCollapse="ngbCollapse" [(ngbCollapse)]="isSocialMediaMenuCollapsed">
+                <li class="sidebar-li" (click)="socialMediaMenuCollapse.toggle()">
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+                    Youtube
+                </li>
+                <li class="sidebar-li" (click)="socialMediaMenuCollapse.toggle()">
+                    <span class="material-symbols-outlined">
+                        supervisor_account
+                    </span>
+                    Facebook
+                </li>
+                <li class="sidebar-li" (click)="socialMediaMenuCollapse.toggle()">
+                    <span class="material-symbols-outlined">
+                        supervisor_account
+                    </span>
+                    Instagram
+                </li>
+            </div>
+            <li class="sidebar-li" (click)="galleryMenuCollapse.toggle()">
+                <span class="material-symbols-outlined">
+                    public
+                </span>
+                Gallery
+            </li>
+            <div class="sidebar-collapsible-menu-item" #galleryMenuCollapse="ngbCollapse" [(ngbCollapse)]="isGalleryMenuCollapsed">
+                <li class="sidebar-li" (click)="galleryMenuCollapse.toggle()">
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+                    Photos
+                </li>
+                <li class="sidebar-li" (click)="galleryMenuCollapse.toggle()">
+                    <span class="material-symbols-outlined">
+                        supervisor_account
+                    </span>
+                    Videos
+                </li>
+                <li class="sidebar-li" (click)="galleryMenuCollapse.toggle()">
+                    <span class="material-symbols-outlined">
+                        supervisor_account
+                    </span>
+                    Posts
+                </li>
+            </div>
+        </ul>
+        <!-- <app-admin-sidebar class="page-sidebar"></app-admin-sidebar> -->
+    </div>
+
+
+</ng-template>
+<!-- <p>
+    <button
+        type="button"
+        class="btn btn-outline-primary"
+        (click)="collapse.toggle()"
+        [attr.aria-expanded]="!isCollapsed"
+        aria-controls="collapseExample"
+    >
+        Toggle with Function
+    </button>
+</p> -->
+<!-- <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+    <div class="card">
+        <div class="card-body">You can collapse this card by clicking one Toggle button</div>
+    </div>
+</div> -->
+<!-- <div class="collapse" id="collapseExample">
+	<div class="card">
+		<div class="card-body">You can collapse this card by clicking one Toggle button</div>
+	</div>
+</div> -->
