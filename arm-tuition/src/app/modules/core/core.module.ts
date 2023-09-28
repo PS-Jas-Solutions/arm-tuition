@@ -10,8 +10,12 @@ import { FeatureCardComponent } from './components/feature-card/feature-card.com
 import { YoutubeVideoComponent } from './components/youtube-video/youtube-video.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
-import { CreateUpdateStudentComponent } from './components/create-update-student/create-update-student.component';
+import { CoreComponent } from './components/core/core.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const routes:Routes = [
+  { path:'', component: CoreComponent}
+];
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -23,10 +27,11 @@ import { CreateUpdateStudentComponent } from './components/create-update-student
     YoutubeVideoComponent,
     GalleryComponent,
     ContactUsComponent,
-    CreateUpdateStudentComponent
+    CoreComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(routes)
   ],
   exports: [
     HeaderComponent,
@@ -37,8 +42,7 @@ import { CreateUpdateStudentComponent } from './components/create-update-student
     FeatureCardComponent,
     YoutubeVideoComponent,
     GalleryComponent,
-    ContactUsComponent,
-    CreateUpdateStudentComponent
+    ContactUsComponent
   ]
 })
 export class CoreModule { }

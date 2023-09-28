@@ -660,3 +660,29 @@ body {
         }
     }
 }
+
+
+
+
+
+
+
+.primary-btn {
+    width: 10rem;
+    height: 3rem;
+    margin: 0 auto;
+    border: 0;
+    background: $primary-color;
+    color: $color-white;
+    cursor: pointer;
+    border-radius: 1.5rem;
+    margin-top: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+  
