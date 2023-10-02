@@ -28,7 +28,7 @@ export class AdminComponent {
 		);
   }
   public gotoStudentList() {
-    // this.router.navigate(['admin/students']);
+    this.router.navigate(['admin/students']);
     this.offcanvasService.dismiss();
   }
 }
