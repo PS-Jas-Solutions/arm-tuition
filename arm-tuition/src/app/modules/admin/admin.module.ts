@@ -7,6 +7,7 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { NgbCollapseModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -31,7 +32,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     NgbModule,
-    NgbCollapseModule
+    NgbCollapseModule,
+    FormsModule
   ]
 })
 export class AdminModule { }
