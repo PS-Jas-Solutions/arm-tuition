@@ -9,7 +9,7 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./student-list.component.scss']
 })
 export class StudentListComponent {
-  displayedColumns = ['id', 'name', 'progress', 'color'];
+  displayedColumns = ['id', 'student_name', 'standard', 'student_phone_number', 'student_email', 'gaurdian_1_name', 'gaurdian_1_phone_number', 'actions'];
   dataSource: MatTableDataSource<UserData>;
   public pageSize = 5;
 
@@ -17,10 +17,8 @@ export class StudentListComponent {
   @ViewChild(MatSort) sort: MatSort;
 
   constructor() {
-    // Create 100 users
     const users: UserData[] = [];
-    for (let i = 1; i <= 100; i++) { users.push(createNewUser(i)); }
-
+    users.push(createNewUser());
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
   }
@@ -43,28 +41,26 @@ export class StudentListComponent {
 }
 
 /** Builds and returns a new User. */
-function createNewUser(id: number): UserData {
-  const name =
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
-
+function createNewUser(): UserData {
   return {
-    id: id.toString(),
-    name: name,
-    progress: Math.round(Math.random() * 100).toString(),
-    color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
+    id: '1',
+    student_name: 'Paul Raju',
+    standard: 'X',
+    student_phone_number: '9020777509',
+    student_email: 'paulrj1994@gmail.com',
+    gaurdian_1_name: 'K A Raju',
+    gaurdian_1_phone_number: '9895424164',
+    actions: []
   };
 }
 
-const COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
-  'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-const NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-  'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-  'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-
 export interface UserData {
   id: string;
-  name: string;
-  progress: string;
-  color: string;
+  student_name: string;
+  standard: string;
+  student_phone_number: string;
+  student_email: string;
+  gaurdian_1_name: string;
+  gaurdian_1_phone_number: string;
+  actions?: any[];
 }
