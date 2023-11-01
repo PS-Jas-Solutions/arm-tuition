@@ -2,7 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-// import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import { StudentAddEditComponent } from '../student-add-edit/student-add-edit.component';
 @Component({
   selector: 'app-student-list',
   templateUrl: './student-list.component.html',
@@ -16,7 +17,7 @@ export class StudentListComponent {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor() {
+  constructor(private readonly dialog: MatDialog) {
     const users: UserData[] = [];
     users.push(createNewUser());
     // Assign the data to the data source for the table to render
@@ -37,6 +38,16 @@ export class StudentListComponent {
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
     this.dataSource.filter = filterValue;
+  }
+  openAddEditStudentDialog(): void {
+    const dialogRef = this.dialog.open(StudentAddEditComponent, {
+      data: { type: 'ADD' },
+      backdropClass: 'popup'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 }
 

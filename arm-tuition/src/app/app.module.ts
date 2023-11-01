@@ -10,22 +10,23 @@ import { ChooseUserComponent } from './choose-user/choose-user.component';
 import { NgbCollapseModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatTableModule} from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
-    ChooseUserComponent,
-    
+    ChooseUserComponent
+
   ],
   imports: [
     BrowserModule,
-    FormsModule, 
+    FormsModule,
     CommonModule,
     AppRoutingModule,
     CoreModule,
@@ -41,7 +42,7 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     MatInputModule,
     MatRippleModule,
-
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

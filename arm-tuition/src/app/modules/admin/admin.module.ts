@@ -16,6 +16,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
+import { StudentAddEditComponent } from './student-add-edit/student-add-edit.component';
+import { MatDialogModule } from '@angular/material/dialog';
 const routes: Routes = [
   {
     path: '', component: AdminComponent, 
@@ -35,7 +37,8 @@ const routes: Routes = [
     AdminSidebarComponent,
     AdminDashboardComponent,
     AdminPageComponent,
-    StudentListComponent
+    StudentListComponent,
+    StudentAddEditComponent
   ],
   imports: [
     CommonModule,
@@ -51,6 +54,7 @@ const routes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatRippleModule,
+    MatDialogModule
   ]
 })
 export class AdminModule { }
