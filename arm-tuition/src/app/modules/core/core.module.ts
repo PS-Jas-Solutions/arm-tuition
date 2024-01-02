@@ -13,6 +13,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { CoreComponent } from './components/core/core.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ReviewComponent } from './components/review/review.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 const routes:Routes = [
   { path:'', component: CoreComponent}
@@ -32,7 +33,7 @@ const routes:Routes = [
     ReviewComponent
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     RouterModule.forChild(routes)
   ],
   exports: [

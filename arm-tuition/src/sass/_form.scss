@@ -22,6 +22,7 @@
 
         &.full-width-field {
             width: 100%;
+            padding: 0;
         }
 
         &.half-width-field {
@@ -60,6 +61,9 @@
             label.movable {
                 padding-left: 3rem;
             }
+            label.active {
+                padding-left: 0;
+            }
         }
 
         label.movable {
@@ -79,6 +83,12 @@
         label.movable:has(+ input:focus),
         label.movable:has(+ input:active),
         label.movable:has(+ input:visited) {
+            top: -2.5rem;
+            left: 0;
+            padding-left: 0;
+            color: $primary-color;
+        }
+        label.active {
             top: -2.5rem;
             left: 0;
             padding-left: 0;
@@ -286,6 +296,9 @@
                 height: 3rem;
                 padding: 0 15px;
             }
+            textarea {
+                line-height: 1rem;
+            }
         }
 
         input[type="checkbox"] {
@@ -398,6 +411,7 @@
 
         .form-group.half-width-field {
             width: 100%;
+            padding: 0;
         }
     }
 }

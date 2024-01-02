@@ -7,23 +7,23 @@
             <div class="row">
                 <div class="form-group has-icon half-width-field">
                     <i class="fa fa-user-o"></i>
-                    <label class="movable" for="first_name">First Name</label>
+                    <label class="movable" for="first_name" [ngClass]="{'active': first_name}">First Name</label>
                     <input type="text" name="first_name" id="first_name" class="form-field required" />
                 </div>
                 <div class="form-group has-icon half-width-field">
                     <i class="fa fa-user-o"></i>
-                    <label class="movable" for="last_name">Last Name</label>
-                    <input type="text" name="last_name" id="last_name" class="form-field required" />
+                    <label class="movable" for="last_name" [ngClass]="{'active': last_name}">Last Name</label>
+                    <input type="text" name="last_name" id="last_name" [(ngModel)]="last_name" class="form-field required" />
                 </div>
             </div>
             <div class="row">
                 <div class="form-group has-icon half-width-field">
                     <i class="fa fa-phone"></i>
-                    <label class="movable" for="phone_number">Phone Number</label>
+                    <label class="movable" for="phone_number" [ngClass]="{'active': phone_number}">Phone Number</label>
                     <input type="text" name="phone_number" id="phone_number" class="form-field required" />
                 </div>
                 <div class="form-group has-icon select dropdown-up fa-id-badge half-width-field">
-                    <label class="movable" for="class">Class</label>
+                    <label class="movable" for="class" [ngClass]="{'active': class}">Class</label>
                     <select name="class" id="class" class="form-field required">
                         <option value="10" selected="">X</option>
                         <option value="11">XI</option>
@@ -34,18 +34,18 @@
             <div class="row">
                 <div class="form-group has-icon full-width-field">
                     <i class="fa fa-envelope-o"></i>
-                    <label class="movable" for="email">Email address</label>
+                    <label class="movable" for="email" [ngClass]="{'active': email}">Email address</label>
                     <input type="email" name="email" id="email" class="form-field required email" />
                 </div>
             </div>
             <div class="row">
                 <div class="form-group has-icon full-width-field">
                     <i class="fa fa-comment-o"></i>
-                    <label class="movable" for="comment">Comment</label>
+                    <label class="movable" for="comment" [ngClass]="{'active': comment}">Comment</label>
                     <textarea name="comment" id="comment" rows="6" class="form-field required"></textarea>
                 </div>
             </div>
-            <div class="row">
+            <div class="">
                 <button class="submit-button">Submit</button>
             </div>
 

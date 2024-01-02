@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent {
-
+  public first_name = '';
+  public last_name = '';
+  public phone_number = '';
+  public class = '';
+  public email = '';
+  public comment = '';
 }

@@ -510,6 +510,7 @@ $primary-active: #007ECC;
     margin-top: 1.8rem;
     font-size: 1.5rem;
     font-weight: 700;
+    margin-top: 1rem;
 
     &:hover {
         transform: scale(1.05);
@@ -703,7 +704,7 @@ $primary-active: #007ECC;
         }
 
         .carousel-nav {
-            bottom: -3.5rem;
+            bottom: -2.5rem;
         }
     }
 }
@@ -1086,5 +1087,5 @@ mat-header-row {
 }
 
 .form .form-group.has-icon .fa {
-    left: 2rem;
+    left: 1rem;
 }

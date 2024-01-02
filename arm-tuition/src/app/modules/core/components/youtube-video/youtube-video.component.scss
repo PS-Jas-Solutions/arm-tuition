@@ -103,6 +103,12 @@
         .video-container {
             width: 100%;
             grid-template-rows: repeat(2, 10rem);
+            padding: 0.5rem;
+            flex-direction: column;
+
+            a {
+                width: 40vw;
+            }
         }
 
         .youtube-details {
@@ -116,6 +122,7 @@
 
             .youtube-btn {
                 margin: 2rem auto;
+                padding: 0.5rem 1rem;
             }
 
             .normal-text {

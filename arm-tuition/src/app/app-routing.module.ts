@@ -4,12 +4,12 @@ import { AppComponent } from './app.component';
 import { ChooseUserComponent } from './choose-user/choose-user.component';
 
 const routes: Routes = [
-  // {
-  //   path: '', redirectTo: 'home', pathMatch: 'full'
-  // },
   {
-    path: '', component: ChooseUserComponent
+    path: '', redirectTo: 'core', pathMatch: 'full'
   },
+  // {
+  //   path: '', component: ChooseUserComponent
+  // },
   {
     path: 'home', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
   },
